@@ -3,7 +3,7 @@
 This is the repository for the remote Fullstack Java Enterprise Revature batch starting May 23rd, 2022.
 Here you will find all of the notes from class aslong with study-guides, project guidelines, and more resources.
 
-> QC is important! It is meant to simulate the interview process. Check out [this guide on how to do well](https://github.com/211025-Enterprise/demos/blob/main/how-to-do-well-in-qc.md).
+> QC is important! It is meant to simulate the interview process. Check out [this guide on how to do well](https://github.com/bpinkerton/how-to-do-well-in-qc).
 
 ### Environment Setup Guide can be found [here](https://github.com/bpinkerton/environment-setup).
 
