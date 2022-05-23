@@ -1,6 +1,6 @@
-# Welcome to 211025 Java Enterprise!
+# Welcome to 220523 Java/React!
 
-This is the repository for the remote Fullstack Java Enterprise Revature batch starting May 23rd, 2022.
+This is the repository for the remote Fullstack Java/React Revature batch starting May 23rd, 2022.
 Here you will find all of the notes from class aslong with study-guides, project guidelines, and more resources.
 
 > QC is important! It is meant to simulate the interview process. Check out [this guide on how to do well](https://github.com/bpinkerton/how-to-do-well-in-qc).
