@@ -35,6 +35,6 @@ Here you will find all of the notes from class aslong with study-guides, project
 :pencil2: = Quiz <br>
 :computer: = HackerRank Coding Challenge <br>
 :speech_balloon: = 1-on-1 Interviews <br>
-:clipboard: = Brandon is in a Meeting (self/group study)
-:mag: = self or group study
+:clipboard: = Brandon is in a Meeting (self/group study) <br>
+:mag: = self or group study <br>
 `blank space` = lecture, demos & exercises <br>
