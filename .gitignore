@@ -1,6 +1,6 @@
 .idea
 out
-*/target
-*.iml
-*/gradle
-*/.gradle
+**/build
+**.iml
+**/gradle
+**/.gradle
