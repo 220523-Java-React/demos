@@ -1,1 +1,1 @@
-# <NAME OF API> Documentation
+# <NAME OF API> Documentation (synergy)
