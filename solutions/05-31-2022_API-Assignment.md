@@ -21,11 +21,11 @@ This Api call signals to the user than the user would like 5 questions with a ha
 
 
 ## Type Parameter
-the type parameter signals to the server what kinds of questions that the user would like to recieve.  The user can input "boolean" to recieve true/false questions or "multiple" to recieve multiple choice questions.
+The type parameter signals to the server what kinds of questions that the user would like to recieve.  The user can input "boolean" to recieve true/false questions or "multiple" to recieve multiple choice questions.
 ![Type Example](./image3.png)
 > https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean
 
-The Api call signals to the server that the user would like 10 questions with an easy difficulty based on the "difficulty" parameter, and that the user would also like a true/false question based on the "type" paramter being boolean.
+This Api call signals to the server that the user would like 10 questions with an easy difficulty based on the "difficulty" parameter, and that the user would also like a true/false question based on the "type" paramter being boolean.
 
 
 ## Category Parameter
