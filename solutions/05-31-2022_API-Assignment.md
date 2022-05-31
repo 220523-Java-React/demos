@@ -12,7 +12,7 @@ This Api call signals to the server that the user would like one question with n
 
 
 ## Difficulty Parameter
-The diffeculty parameter tells the server what difficulty of questions that the user would like.  The user can chose from "easy", "medium", or "hard" to recieve questions from the respective difficulty.
+The difficulty parameter tells the server what difficulty of questions that the user would like.  The user can chose from "easy", "medium", or "hard" to recieve questions from the respective difficulty.
 
 ![Difficulty Example](./image2.png)
 > https://opentdb.com/api.php?amount=5&difficulty=hard
