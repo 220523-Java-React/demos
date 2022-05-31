@@ -4,23 +4,33 @@ The Open Trivia Database Api provides questions to the user based on the specifi
 ## Amount Parameter
 > https://opentdb.com/api.php?amount=1
 
+![image1](image1.png)
+
 This Api call signals to the server that the user would like one question with no specifications, therefore the given quesiton will be chosen from any of the available questions.
 
 ## Difficulty Parameter
 > https://opentdb.com/api.php?amount=5&difficulty=hard
+
+![image2](image2.png)
 
 This Api call signals to the user than the user would like 5 questions with a hard difficulty.
 
 ## Type Parameter
 > https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean
 
-The Api call signals to the server that the user would like 10 questions with an easy difficulty based on the "difficulty" parameter, and that the user would also like a true/false question based on the "type" paramter being boolean.
+![image3](image3.png)
 
-## Catagory Parameter
+The Api call signals to the server that the user would like 10 questions with an easy difficulty based on the "difficulty" parameter, and that the user would also like a true/false question based on the "type" parameter being boolean.
+
+## Category Parameter
 > https://opentdb.com/api.php?amount=10&category=14
 
-This Api call signals to the server what catagory the user would like to recieve the 10 questions from, the parameter "catagory" of 14 signals to the user that the catagory the questions are take from have to do with entertainment.
+![image4](image4.png)
+
+This Api call signals to the server what category the user would like to receive the 10 questions from, the parameter "category" of 14 signals to the user that the category the questions are take from have to do with entertainment.
 
 > https://opentdb.com/api.php?amount=10&category=28
 
-In this Api call we change the "catagory" to 28, this means that we will only recieve questions from teh vehicles catagory.
+![image5](image5.png)
+
+In this Api call we change the "category" to 28, this means that we will only receive questions from the vehicles category.
