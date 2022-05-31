@@ -1,0 +1,5 @@
+The first screenshot (ss_Monster Reborn.png) uses a get command to call the card name "monster reborn" listed under "name".
+The Second screenshot (ss_dark magician.png) uses a get command to call the card names "dark magican" listen under "name".
+The Third screenshot (ss+attributr_dark.png) uses a get command to call all of the cards with the attribute listed "dark".
+The Fourth screenshot (ss_atk_1800.png) uses the get command to show all the attack monster with an attack power of 1800.
+The Fifth screenshot (ss_level_8.png) uses the get command to show all of the monsters that have a 8 star level.
