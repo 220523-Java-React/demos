@@ -1,5 +1,5 @@
 # Open Trivia Database Documentation
-The Open Trivia Database Api provides questions to the user based on the specifications given in the Api calls.  The Api is controlled through different paramters as shown below, and givee to the user a set of questions that fulfils the paramters given in the URL.
+The Open Trivia Database Api provides questions to the user based on the specifications given in the Api calls.  The Api is controlled through different paramters as shown below, and gives to the user a set of questions that fulfils the paramters given in the URL.
 
 ## Amount Parameter
 > https://opentdb.com/api.php?amount=1
@@ -29,7 +29,6 @@ The Api call signals to the server that the user would like 10 questions with an
 
 This Api call signals to the server what category the user would like to receive the 10 questions from, the parameter "category" of 14 signals to the user that the category the questions are take from have to do with entertainment.
 
-> https://opentdb.com/api.php?amount=10&category=28
 
 ![image5](image5.png)
 
