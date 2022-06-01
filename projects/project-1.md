@@ -28,7 +28,7 @@ The project will be due at **10:00am EST on 06/24/2022** and should be pushed to
 ## Specifications
 1. Users should have two roles to choose from: CUSTOMER, EMPLOYEE
 2. Offers should have three status options: OPEN, APPROVED, REJECTED
-3. Your API should effictively utilize Authentication. I.e. only users with a specific role should be able to perform certain operations.
+3. Your API should effictively utilize Authorization. I.e. only users with a specific role should be able to perform certain operations.
 4. You will likely need the following Endpoints:
 - Users: to handle CRUD operations for the User model
 - Cars: to handle CRUD operations for the Car model
