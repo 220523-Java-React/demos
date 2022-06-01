@@ -3,7 +3,7 @@
 In this project you will be building a Car Dealership Web API. This is NOT a full stack assignment, so there will not be a UI element, just an API to serve data to be consumed via Postman.
 
 The project will be due at **10:00am EST on 06/24/2022** and should be pushed to a remote GitHub repository under the following naming convention: 
-<br> **first_last_p1 **
+<br> **first_last_p1**
 <br> Ex: **brandon_pinkerton_p1**
 
 ## Tech Stack
