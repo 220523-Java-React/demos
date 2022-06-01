@@ -36,18 +36,18 @@ The project will be due at **10:00am EST on 06/24/2022** and should be pushed to
 - (stretch goal) Payments: to handle CRUD operations for the Payment model
 
 ## User Stories
-[ ] - As a non-user, I can create a Customer or Employee Account
-[ ] - As a Customer, I can view available Cars on the lot
-[ ] - As a Customer, I can make an Offer on an available Car
-[ ] - As a Customer, I can view my open offers
-[ ] - As a Customer, I can view the Cars that I own
-[ ] - As an Employee, I can add a new Car to the lot
-[ ] - As an Employee, I can accept or reject an Offer on a Car
+[ ]- As a non-user, I can create a Customer or Employee Account
+[ ]- As a Customer, I can view available Cars on the lot
+[ ]- As a Customer, I can make an Offer on an available Car
+[ ]- As a Customer, I can view my open offers
+[ ]- As a Customer, I can view the Cars that I own
+[ ]- As an Employee, I can add a new Car to the lot
+[ ]- As an Employee, I can accept or reject an Offer on a Car
 
 ## Stretch Goals
-[ ] - As a Customer, I can setup a Payment Plan to pay off a Car's balance
-[ ] - As a Customer, I can view my existing Payment Plans
-[ ] - As a Customer, I can make a Payment
+[ ]- As a Customer, I can setup a Payment Plan to pay off a Car's balance
+[ ]- As a Customer, I can view my existing Payment Plans
+[ ]- As a Customer, I can make a Payment
 
 ## Presentation
 Your presentation will consist of a demonstration of your API. You will be given 5 minutes to showcase the completed User Stories listed above in Postman to demonstrate the functionality of the API. The demo will be followed by technical questions from your trainer about your project.
