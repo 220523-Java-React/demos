@@ -13,6 +13,7 @@ The project will be due at **10:00am EST on 06/24/2022** and should be pushed to
 - Log4J
 - Javalin
 - JDBC
+- Docker
 - PostgreSQL
 - Postman
 - Git
