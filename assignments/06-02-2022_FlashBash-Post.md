@@ -18,4 +18,4 @@ Some noteworthy methods on the String class are:
 - contains()
 
 ## Submission
-Once the implementation has been completed, please push your code up to your teams branch within demos and submit a pull request back to the main branch. 
+Once the implementation has been completed, please push your code up to your teams branch within the FlashBashAPI repo and submit a pull request back to the main branch. 
