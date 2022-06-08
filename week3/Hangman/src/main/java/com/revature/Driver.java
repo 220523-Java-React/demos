@@ -1,4 +1,3 @@
-package com.revature;
 import java.util.*;
 
 public class Driver {
@@ -6,6 +5,7 @@ public class Driver {
         Scanner input = new Scanner(System.in);
         int maxGuesses = 8;
         int wrongGuesses = 0;
+        int correctGuesses = 0;
 
         // we are going to use an array of characters as a string to make it easier
         int wordIndex = new Random().nextInt(words.length);
@@ -27,6 +27,35 @@ public class Driver {
             System.out.print("Guess a letter: ");
             char guess = input.nextLine().toLowerCase(Locale.ROOT).charAt(0);
             // TODO: complete the game implementation
+
+            boolean correct = false;
+
+            // iterate through the randomized word by each character with a for loop.
+            for(int i=0; i<wordToGuess.length; i++) {
+
+                // check if the guess is equal to the current letter at index i of the word
+                // Also, checks if the currentLetter is an underscore to make sure we don't check letters already found
+                if (currentLetters[i] == '_' && guess == wordToGuess[i]) {
+                    currentLetters[i] = guess;
+                    correct = true;
+                    correctGuesses++;
+                }
+            }
+
+            // added a flag for incorrect guess
+            // if the flag is incorrect, add the guess to the currentWrongLetters List and increment wrong guesses by 1.
+            if (!correct) {
+                currentWrongLetters.add(guess);
+                wrongGuesses += 1;
+            }
+
+            // if we found the word already, break the loop.
+            if (correctGuesses == currentLetters.length) {
+                System.out.println("\nCorrect Answer Found! ");
+                System.out.println(currentLetters);
+                break;
+            }
+
             // if the guess is correct -> replace the currentLetters array with the correct letter in any given position of that letter
             // if the guess is incorrect -> add one to wrong guesses -> add the letter to currentWrongLetters
 
