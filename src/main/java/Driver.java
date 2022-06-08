@@ -44,14 +44,14 @@ public class Driver {
 
             // added a flag for incorrect guess
             // if the flag is incorrect, add the guess to the currentWrongLetters List and increment wrong guesses by 1.
-            if (correct == false) {
+            if (!correct) {
                 currentWrongLetters.add(guess);
                 wrongGuesses += 1;
             }
 
             // if we found the word already, break the loop.
             if (correctGuesses == currentLetters.length) {
-                System.out.println("Correct Answer Found!");
+                System.out.println("\nCorrect Answer Found! ");
                 System.out.println(currentLetters);
                 break;
             }
