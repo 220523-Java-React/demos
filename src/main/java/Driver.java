@@ -32,7 +32,7 @@ public class Driver {
             for(int i=0; i<wordToGuess.length; i++) {
 
                 // check if the guess is equal to the current letter at index i of the word
-                // Also, checks if the currentLetter is an underscore to make sure we don't letters we found
+                // Also, checks if the currentLetter is an underscore to make sure we don't check letters already found
                 if (guess == wordToGuess[i] && currentLetters[i] == '_') {
                     currentLetters[i] = guess;
                     correct = true;
