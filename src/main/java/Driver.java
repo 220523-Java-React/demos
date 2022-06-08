@@ -29,6 +29,8 @@ public class Driver {
             // TODO: complete the game implementation
 
             boolean correct = false;
+
+            // iterate through the randomized word by each character with a for loop.
             for(int i=0; i<wordToGuess.length; i++) {
 
                 // check if the guess is equal to the current letter at index i of the word
