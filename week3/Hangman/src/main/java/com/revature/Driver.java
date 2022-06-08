@@ -8,29 +8,62 @@ public class Driver {
         int wrongGuesses = 0;
 
         // we are going to use an array of characters as a string to make it easier
-        int wordIndex = new Random().nextInt(words.length);
-        char[] wordToGuess = words[wordIndex].toCharArray();
-        char[] currentLetters = new char[wordToGuess.length];
-        List<Character> currentWrongLetters = new ArrayList<>();
-
+        int wordIndex = new Random().nextInt(words.length); // this grabs random word
+        char[] wordToGuess = words[wordIndex].toCharArray(); //
+        char[] currentLetters = new char[wordToGuess.length]; // array containing
+        List<Character> currentWrongLetters = new ArrayList<>(); //List of wrong letters.
         // this is "seeding" currentLetters so that it displays underscores for anything missing
         for(int i = 0; i < wordToGuess.length; i++){
             currentLetters[i] = '_';
         }
-
-
         // this is the game
-        do{
+        int correctLetterCount=0; //Total number of correct letters.
+        int correctLetterDetector; //You get 1 when you guessed a letter right. Otherwise, you get 0;
+        boolean duplicated=false;
+
+        while(true){
             System.out.println(currentLetters);// _ _ _ _ -> _ a _ a
             System.out.println("Wrong guesses " + currentWrongLetters);
             System.out.println("Wrong guesses remaining: " + (maxGuesses - wrongGuesses));
             System.out.print("Guess a letter: ");
             char guess = input.nextLine().toLowerCase(Locale.ROOT).charAt(0);
-            // TODO: complete the game implementation
-            // if the guess is correct -> replace the currentLetters array with the correct letter in any given position of that letter
-            // if the guess is incorrect -> add one to wrong guesses -> add the letter to currentWrongLetters
 
-        } while(wrongGuesses < maxGuesses);
+            if(wrongGuesses < maxGuesses){
+                correctLetterDetector=0;
+                for(int i=0; i<wordToGuess.length ;i++){
+
+                    if(wordToGuess[i]==guess){
+                        duplicated=true;
+                        currentLetters[i]=wordToGuess[i];
+                        correctLetterCount++;
+                        correctLetterDetector++;
+                    }
+                    z
+                }
+                // When guessed a wrong letter
+                if(duplicated==true){
+                    System.out.println("Correct");
+                }
+                duplicated=false;
+                if(correctLetterDetector==0){
+                    System.out.println("Wrong letter!");
+                    currentWrongLetters.add(guess);
+                    wrongGuesses++;
+                }
+                // When you completed all letters of the word to guess.
+                if(correctLetterCount==wordToGuess.length){
+                    System.out.println("You did it!");
+                    System.out.println("Congratulations!");
+                    break;
+                }
+            }
+            //When a number of wrong guess turn into 0
+            if(maxGuesses - wrongGuesses==0){
+                System.out.println("Too bad! Game Over!");
+                System.out.println("Please try again!");
+                break;
+            }
+        }
     }
 
     static String[] words = {
