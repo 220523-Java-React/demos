@@ -44,7 +44,7 @@ public class Driver {
 
             // added a flag for incorrect guess
             // if the flag is incorrect, add the guess to the currentWrongLetters List and increment wrong guesses by 1.
-            if (!correct) {
+            if (correct == false) {
                 currentWrongLetters.add(guess);
                 wrongGuesses += 1;
             }
