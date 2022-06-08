@@ -31,18 +31,25 @@ public class Driver {
             boolean correct = false;
             for(int i=0; i<wordToGuess.length; i++) {
 
+                // check if the guess is equal to the current letter at index i of the word
+                // Also, checks if the currentLetter is an underscore to make sure we don't letters we found
                 if (guess == wordToGuess[i] && currentLetters[i] == '_') {
                     currentLetters[i] = guess;
                     correct = true;
                     correctGuesses++;
                 }
             }
+
+            // added a flag for incorrect guess
+            // if the flag is incorrect, add the guess to the currentWrongLetters List and increment wrong guesses by 1.
             if (correct == false) {
                 currentWrongLetters.add(guess);
                 wrongGuesses += 1;
             }
+
+            // if we found the word already, break the loop.
             if (correctGuesses == currentLetters.length) {
-                System.out.println("Correct Answer");
+                System.out.println("Correct Answer Found!");
                 System.out.println(currentLetters);
                 break;
             }
