@@ -35,7 +35,7 @@ public class Driver {
 
                 // check if the guess is equal to the current letter at index i of the word
                 // Also, checks if the currentLetter is an underscore to make sure we don't check letters already found
-                if (guess == wordToGuess[i] && currentLetters[i] == '_') {
+                if (currentLetters[i] == '_' && guess == wordToGuess[i]) {
                     currentLetters[i] = guess;
                     correct = true;
                     correctGuesses++;
