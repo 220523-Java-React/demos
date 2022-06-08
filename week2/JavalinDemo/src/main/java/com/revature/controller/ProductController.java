@@ -2,7 +2,9 @@ package com.revature.controller;
 
 import com.revature.model.Product;
 import com.revature.service.ProductService;
+import io.javalin.http.Context;
 import io.javalin.http.Handler;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * The ProductController is designed to handle web requests for the Product resource
@@ -19,7 +21,6 @@ public class ProductController {
 
     // CREATE
     public Handler createNewProduct = ctx -> {
-
         productService.createNewProduct(new Product(
                 "Milk",
                 "1 Gallon",
