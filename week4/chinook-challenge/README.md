@@ -1,5 +1,5 @@
 # Chinook SQL Lab
-In this exercise you will practice populating a database by running the provided `chinook.sql` scripts in sequential order within DBeaver.  Use SQL Sublanguages to return the requested information below:
+In this exercise you will practice populating a database by running the provided `chinook.sql` to populate the database within DBeaver.  Use SQL Sublanguages to return the requested information below:
 
 
 
