@@ -3,11 +3,17 @@
 ## Computer / OS Fundamentals
 
 - What is the difference between a Client and a Server?
+Client is a local machine that users use like a program or an application that makes requests from a server. Server is a computer that processes requests.
 - What is an Operating System?
+It is a software platform that controls hardware to run a program.
 - What are some common Client operating systems?
+Windows, MacOS, Linux
 - What are some common Server operating systems?
+Window Server, Mac Server
 - What does it mean to be Open Source?
+A code base that is not licensed and free to all to download and manipulate.
 - Why would a server want to run an open source operating system?
+Open source is broader and cheaper. The security is improved, coding is easier to process because many people contributed, more stable. 
 
 ## Fundamentals of Version Control
 
