@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <!-- the head tag is responsible for metadata about the site, not the actual rendered elements -->
+    <head>
+        <link rel="stylesheet" href="./styles.css" />
+
+        <!-- Internal Stylesheet-->
+        <style>
+            /* element selector */
+            p{
+                font-size: large;
+            }
+
+            /* class selector */
+            .black-bg{
+                background-color:black;
+            }
+
+            /* nested class selector */
+            p.red-text{
+                color: red;
+            }
+            
+            /* id selector */
+            #grocery-list{
+                color: blue;
+            }
+        </style>
+    </head>
+
+
+    <!-- Going to house all of the elements that we render on a given page-->
+    <body style="color:orange; background-color:green;">
+        <!-- Heading tags are used to render heading of varying sized-->
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
+        <h4>Heading Four</h4>
+        <h5>Heading Five</h5>
+        <h6>Heading Six</h6>
+
+        <p class="red-text black-bg">
+            This is paragraph tag. <br>
+
+            This is a new line.
+            Wherever I put my information, it will be rendered as a text block
+        </p>
+
+        <!-- Unordered list is just bullet points -->
+
+        <h4>Gorcery List</h4>
+        <ul class="red-text">
+            <li>Milk</li>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Strawberries</li>
+        </ul>
+
+        <!-- Ordered list counts numerically from 1. ... N. -->
+        <ol id="grocery-list">
+            <li>Milk</li>
+            <li>Bread</li>
+            <li>Eggs</li>
+            <li>Strawberries</li>
+        </ol>
+
+    </body>
+</html>

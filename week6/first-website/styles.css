@@ -1,0 +1,29 @@
+/* This is an external stylesheet */
+
+h1, h2, h3, h4, h5, h6 {
+    color: aqua;
+}
+
+ul > li:nth-child(even){
+    color: burlywood;
+    background-color:gray;
+}
+
+ul > li:nth-child(odd){
+    color: white;
+}
+
+ul > li {
+    /* the amount space between element borders*/
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    /* a border borders the padding and content of an element */
+    border: 3px solid black;
+
+    /* padding is the space between an elements content and its border */
+    padding: 50px;
+
+    /* content is the content of the element */
+     text-align: center;
+}
