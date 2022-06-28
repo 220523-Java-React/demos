@@ -45,13 +45,29 @@ function doSomething(){ // Functions are objects
 // == does allow type coercion
 // === does not allow type coercion
 
-word = "hello" + 123;
+// Variable Declartion
+//      x = 10; ->  let x = 10;
+//      var x = 10      -> this is a variable, global and function scoped
+//      let x = 10      -> this is a variable, block scoped
+//      const x = 10    -> this is a variable, block scoped, the reference can not be changed
 
-console.log(word);   // what prints -> hello123
 
-word = 123 + "1";
+// regular function declaration
+let fun = function something(){
+    console.log("Calling from another function")
+}
 
-console.log(word);  // what prints -> 1231   OR 124
+// arrow function declaration
+let arrowFun = (param) => {
+    console.log(param)
+}
 
-console.log(typeof "hello")
+let callFunction = (funToCall) => {
+    console.log("before fun to call")
+    setTimeout(funToCall, 5000);
+    console.log("after fun to call")
+}
+
+callFunction(fun); // this concept of passing a function as a parameter, is called a callback function
+
 
