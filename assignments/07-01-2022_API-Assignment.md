@@ -28,3 +28,9 @@ Properties:
 - age: Integer
 - color: String   (use an enum if you have the time/ want the practice)
 - isEvil: Boolean
+
+## Dependencies
+- Javalin Dependency - for the javalin step
+- Jackson Dependency - for the marshalling step
+- Postgres Driver - for the connection step
+- Slf4J - for the javalin step
