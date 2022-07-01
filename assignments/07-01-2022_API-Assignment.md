@@ -18,7 +18,7 @@ You will have until 4pm EST to complete the assignment, at which point I will ex
 11. Bind your controller handlers to the Javalin object on a route that matches a pluralized name of the data model, make sure the HTTP action is correct
 12. Test your implementation with Postman by building out the requests, have at least 3 records in the db to showcase the getAll properly
 13. Once you are happy with the results, take a screenshot of both Postman requests in action and add the images to your project
-14. Commit and push your code to a new repository that you created with the naming convention: firstname_lastname_gremlins-api
+14. Commit and push your code to a new repository that you created under the organization with the naming convention: firstname_lastname_gremlins-api
 
 ## Data Model
 Resource Name: Gremlin
