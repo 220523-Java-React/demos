@@ -22,6 +22,7 @@ You will have until 4pm EST to complete the assignment, at which point I will ex
 
 ## Data Model
 Resource Name: Gremlin
+
 Properties:
 - name: String
 - age: Integer
