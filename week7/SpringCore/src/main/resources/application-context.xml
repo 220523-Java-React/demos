@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Everything that we wire up / configure goes within the beans tags -->
+
+
+    <!-- Driver Configuration : Constructor Injection -->
+    <!-- Wire up the specific class -->
+    <!-- Point to any dependencies that is has and how they should be injected -->
+    <bean class="com.revature.Driver" name="DriverBean">
+        <constructor-arg name="motdService" ref="MOTDServiceBean" />
+    </bean>
+
+
+    <!-- MOTDService Configuration : Setter Injection && Init Method-->
+    <bean class="com.revature.MOTDService" name="MOTDServiceBean" init-method="initMotds">
+        <property name="defaultIndex" value="0"/>
+    </bean>
+</beans>
