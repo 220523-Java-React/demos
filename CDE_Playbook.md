@@ -13,7 +13,7 @@ Focus on programming foundation- CDE expects the associates to have solid Java/p
 - Understanding of generic cloud architecture irrespective of the cloud platform implemented.  
 
 ## Aron's Meeting
-*	Focus on programming foundation- CDE expects the associates to have solid Java/programming foundation skills
+###	Focus on programming foundation- CDE expects the associates to have solid Java/programming foundation skills
  *	Writing basic algorithms such as ‘checking for a palindrome’ as an example (practice lots of coding challenges)
  *	Understanding program control flow
  *	Problem solving using coding best practices.
@@ -21,11 +21,11 @@ Focus on programming foundation- CDE expects the associates to have solid Java/p
  * Using code quality tools like SonarQube to write efficient code. 
  *	Good understanding of test driven development in context to Java (JUnit), Angular/React (using Jasmine/Karma)
 
-*	Focus on cloud services, agnostic to the cloud provider:
+### Focus on cloud services, agnostic to the cloud provider:
  *	Understanding the various ‘popular’ services that cloud platforms provide. For eg. Compute services, storage services, load balancers, database services, scalability, reliability etc.
  *	Understanding of generic cloud architecture irrespective of the cloud platform implemented. 
 
-*	Agile ceremonies and process:
+### Agile ceremonies and process:
  *	Understanding the various Agile ceremonies, even if it is conceptual. 
  *	Understand the daily stand-up mechanism, retrospective meetings, user story pointing and user story grooming activities. 
 
