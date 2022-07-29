@@ -1,0 +1,353 @@
+
+BI/ETL Notes
+
+Business Intelligence 
+	- Set of tools and methodologies for collecting data and analyzing it to make business decisions.
+	- Technologies provide historical, current, and predictive views of business operations
+
+
+-----------------------------------------------
+
+Data vs Information
+
+
+Data - Figures, numbers, texts, pictures, values, etc.
+
+Information - meaningful insight gathered from data
+
+
+-----------------------------------------------
+
+Structured Data
+
+
+	- Structured Data - Easy to analyze and turn into information
+		- Database Tables, Excel Spreadsheet
+
+	- Unstructured Data - Difficult to extract data
+		- Scanned Text Documents, Video
+
+	- Semi-structured Data - Some structure may have tough parts to analyze
+		- Email, JSONs
+
+
+
+-----------------------------------------------
+
+Data Quality Traits
+
+Consistent - Data doesn't conflict with itself
+
+Relevant - Data is up to date
+
+Complete - No missing records or fields 
+(user: 'ryan', 'schlientz', 'ryan@example.com') 
+(user: 'aranieri', 'adam@example.com', '4321098765')
+
+Accurate - Represents reality
+
+Granular - How specific is your data
+
+-----------------------------------------------
+
+Enterprise Data
+	- Data shared by the various users/departments of an organization
+	- Effort/Money is put into the storage, security, and effective data modeling
+	to reduce enterprise data loss.
+	
+
+	- Transactional Data - data that is used in on-going operations within
+	the company.
+		- orders, sales, billing, users, records, etc.
+	
+	- Analytical Data - numerical values or metrics that provide business 
+	intelligence and help make business decisions.
+		- we refer to these data as facts and they use dimensions.
+		- These facts are usually surrounded by dimensions that look
+		and feel like transactional data.
+
+	- Master Data - Data that is persistent and define the primary business
+	entities within the company. This could include data about the customers
+	products, empolyees, etc.
+		- The key information about the transactional data
+		- Ex: Trip data in cab comp: driver, passenger, route, and fare data.
+			- The driver, passenger, locations and basic fare are all
+			master data about the trip. Each piece may consist of multiple
+			pieces of information like drivers name or salary. But altogether
+			make up the entire piece of transactional data.
+
+	- Reference Data
+		- Subset of master data. Any information that is usually standardized by
+		some other party. Like dewey decimal of a book. Country codes.
+
+	- Reporting Data
+		- Aggregated data compiled for the purpose of analytics.
+			- Seller's average sales per day
+			- Trip data on the 13th of July in the Greater London region
+
+	- Metadata
+		- Data about the data.
+		- If you had an image: filename, author of image, or date added.
+
+
+
+-----------------------------------------------
+
+Data Systems - OLTP vs OLAP
+
+OLTP - Online Transaction Processing
+	- Based on transactions
+	- Database(s) are optimized to handle as many concurrent
+	transactions as possible
+	- very fast write and update
+	- Client facing applications (end users to use)
+		- Banking website, pizza store, employee reimbursement system, etc.
+	- Highly normalized and relational
+
+
+OLAP - Online Analysis Processing
+	- Business facing
+	- Databases are optimized for reads/querying
+	- Usually updated in batches
+		- Ex: End of quarter or week
+		- Slowly changing data (SCD)
+	- De-normalized
+
+		Sale Table:
+		- Year
+		- Month
+		- Day
+		- Quarter
+		- Week
+		- Day of Week
+		- Date => dd,mm,yyyy
+
+		Seller Table:
+		- Seller_ID
+		- Name
+		- DOB
+		- years_at_company
+		- age
+		- hire_date
+
+		Location Table:
+		- street	-> 496 High St Ste 200
+		- city		-> Morgantown
+		- state		-> WV
+		- zip		-> 26505
+		- address	-> 496 High St Ste 200, Morgantown, WV 26505
+
+	- Dimensional Databases
+
+
+-----------------------------------------------
+
+ETL - Extract, Transform, Load
+	- a procedure of copying data from one or more sources into a new location, a data target,
+	that may be in a different context than what was in the data source.
+	- Often this process is done in order to conform data from various sources into one collected and cohesive location.
+
+
+ETL Lifecycle
+
+	- aka ETL Process, is the steps to extract, transform, and load data
+	from data sources into data warehouses and then again into data marts.
+		- Can sometimes include stages such as the ODS and Staging areas.
+
+- Extract - taking data from a data source
+	- Full Extraction - taking all data from data source
+	- Incremental Extraction - taking only new data from data source
+		- often implemented using a staging area to compare differences.
+
+- Transformation - Converting/Modifying extracted data to match desired data target
+	- Cleaning - making data consistent; Nulls to 0s, Male to M, etc.
+	- Deduplication - removing dupes
+	- Format Revision - consistent character sets, units of measurement, data/time conversion
+	- Key Restructuring - Making new key relationships across tables
+
+	Some Advanced Transformations
+	- Derivation - applying logic to make new derived data, likes averages or other calculations
+	- Filtering - selecting only certain data
+	- Data Validation - make sure data is up to standard, could remove records based on certain conditions
+
+- Load - Adding the daat into the data target, such as an ODS, Staging area, or Data Warehouse.
+	- Typically a lot of data has to be loaded into the DW, so optimization of performance matters.
+	- Types of Loads:
+		- Initial Load - populating all the Data Warehouse tables
+		- Incremental Load - adding in new incremental data periodically as needed
+			- Streaming Incremental Load - data goes through ETL as soon as its added to Data Source
+			- Batch Incremental Load - data is loaded in chunks during set intervals
+		- Full Refresh - Removing all data from one or more tables and reloading all fresh data.
+
+
+-----------------------------------------------
+
+Data Sources
+
+	- Anywhere that we are gathering our data from.
+
+	- Client facing applications
+	- Internal facing applications
+	- External Data
+
+
+
+Data Warehouse
+	- Single central hub for entire company's dataset. Everything extracted
+	from all Data Sources.
+	- We will use ETL to congregate all data into our Warehouse
+		- ETL Tools that exist to help in this process:
+			- Informatica
+			- Talend -> Open Source
+	- Usually its own tool/technology, but you can just use a database of your
+	own making.
+
+	- Data within:
+		- Raw Data -> Basic data we collected from our Data Sources
+		- Summarized Data -> Data that we collect from our Raw Data 
+			- (Quarter of the sale), (Seller's average sales per day)
+		- Meta Data -> Information about our Data
+
+
+	- Staging Area
+	- A Staging area is a temporary holding location for data have just been through the ETL process.
+	- Can then integrate completed and validated data into the Data Warehouse.
+	- Sometimes you (the company) may choose to have a staging area for new incoming data. 
+	- With a staging area, you may (potentially) more frequently Extract the data from your data sources.
+
+	Operational Data Store (ODS)
+		- Interim area used before a Data Warehouse.
+		- Provides a snapshot of the latest data from multiple data sources.
+		- deals exclusively with current operationl data.
+		- designed to perform simple queries on smaller data sets.
+
+Data Mart
+
+	- Custom designed databases for business intelligence for a
+	specific department/aspect of your company that your wish to
+	draw conclusion from.
+
+	- Dimensional Databases
+	
+	- Sales of your cookies -> Sales Dim DB
+	- Player Stats		-> Stats Dim DB
+
+
+
+-----------------------------------------------
+
+Dimensional Database
+
+	- Partly de-normalized
+	- Designed for easy queries
+	- Star shaped Schema design pattern
+		- Snowflake Schema
+		- Galaxy Schema
+
+	- Fact Table - 1 per Dimensional Database
+		- Ex: Cookie_Sales
+		- Measures and Dimensions
+		- Each record is a Fact
+
+	- Measures - numbers you want to analyze
+		- amount_sold
+		- revenue
+
+	- Dimensions - Give context to measures
+		- Starts with FKs for context you want about your Fact.
+		- Seller_ID	-> FK
+		- Time_ID	-> FK
+		- Product_ID	-> FK
+		- Location_ID	-> FK
+
+	- The Dimension is the table that spawns from these FKs
+		- Seller Table
+		- Time Table
+		- Product Table
+		- Location Table
+
+		- Each record is a member
+		- Doesn't have to be normalized
+
+		- Ex: Seller Table
+			- Seller_ID
+			- Name
+			- DOB
+			- age
+			- years_at_company
+
+			- These called attributes of the Dimensional Table
+
+		- Product Table
+			- Product_ID
+			- name
+			- price		//May change, 2 of same name, and this is fine.
+	
+		- You are going to want to consider the granularity of your data
+		- Time Table
+			- year
+			- month
+			- day
+			- quarterly?
+
+			- If I made timesheets due once at the end of the week,
+			then I collect 1 piece of data.
+			- If I made timesheets now due every day (COB),
+			then I now collect 5 (or 7) pieces of data that represents
+			the same grand set of information.
+			- What if I made timesheets due hourly?
+			- Adds a ton more data for additional insight.
+			- Should weigh whether its practicaly to incorporate.
+			- Should I make every sale listed as the millisecond they
+			were made?
+
+		- Location Table
+			- State
+			- City
+			- Zip
+			- Street
+			- Address
+
+		- Overall Granularity
+		Each Cookie Sale is By Seller, By Product, By Day, By Address
+
+
+-------------------------------------------
+
+Data Mining
+	- Process of collecting data, modeling the data to find relationships and patterns, 
+	and making business decisions based on these models.
+	- Can be used in combination with Data Warehouse Data to make business decisions.
+
+Data Purging
+	- Process of deleting data from a data warehouse. The frequency of a daat purge depends
+	on the business requirements. Data is often kept for 5-10 before it is purged.
+
+Dimensional Cubes
+	- aka Data Cubes, or OLAP Cubes
+	- Multi-dimensional data view composing of fact tables and dimensions.
+	- Identifies relationships between factors within your data.
+
+
+-------------------------------------------
+
+Example Scenario:
+
+Video Games R Us Company
+
+	- Track Sales, probably simply in a DB.
+	- Game Review Form, consolidates to a Google Spreadsheet
+	- Track play stats, come from an app/api, probably in a DB.
+		- Used by development to improve their game.
+		- Track bugs or updates.
+
+	- Track 1 piece of external data.
+		- Seasonal video game sales.
+		- Demographics of buyers/players.
+		- Design aspects that people like.
+
+
+
+
+
+

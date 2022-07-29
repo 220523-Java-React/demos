@@ -1,0 +1,194 @@
+
+ETL Testing Notes
+
+
+ETL Testing - the process of validating, verifying, and qualifying data while preventing
+	duplicate records and data loss.
+	- ensures that the transfer of data various data sources to targets occurs
+	with adherence to transformation rules and succeeds its validity checks
+
+
+ETL Testing Lifecycle
+
+1.) Identify business requirements
+	- Design a data model, define business flow, assess reporting needs
+
+2.) Validate data sources
+	- Perform a data count check
+	- verify that table and column data types meet specifications
+	- Ensure Check keys are present
+	- Remove dupes
+
+3.) Design Test Cases
+	- Design ETL mapping scenarios
+	- create SQL scripts
+	- define transformation rules
+
+4.) Extract data for sources
+	- Execute ETL Tests per business requirements
+	- Identify ETL Bugs during tests
+		- should report, fix, resolve, and close bug
+
+5.) Apply transformations
+	- Ensure data is transformed to match schema of Data Target
+	- Check data threshold, alignment, and validate data flow.
+
+6.) Load Data into target
+	- Perform record count check before and after data is moved
+	- Confirm invalid data is rejected
+
+7.) Summary Report
+	- Comprise results into report used for decision-makers
+
+8.) Test Closure
+	- End of Test cycle
+
+
+-------------------------------------------------------
+
+
+Types of ETL Tests
+
+- Production Validation
+	- validates data in production systems and compares it against source data.
+
+- Source to target count testing 
+	- verifies number of records loaded into data target match expected record count
+
+- Source to target data testing 
+	- ensures data added to the Data Target without loss of information 
+	- values meet expectations after transformation
+
+- Metadata Testing 
+	- performs data type, length, index, and constraint checks of ETL application metadata 
+		- loading stats, data quality metrics
+
+- Performance Testing 
+	- makes sure data is loaded into Data Target within given time frame.
+
+- Data Transformation Testing 
+	- run SQL queries on each row to verify data is correctly transformed according to business rules
+
+- Data Quality Testing
+	- syntax tests (invalid characters, pattern, casing)
+	- reference tests (number, date, precision, null checks) 
+	- ensures application rejects, accepts default values, and reports invalid data
+
+- Data integration testing 
+	- confirms data from all sources has loaded to Data Target correctly
+	- checks threshold values
+
+- Report testing 
+	- reviews data in summary report
+	- verifies layout and functionality are as expected
+	- makes calculations
+
+----------------------------------------------------
+
+Data Migration Testing
+	- process of verifying data migrates from source to target with no loss of information/data
+
+	- Challenges:
+	
+	- Storage Migration - careful attention necessart for older applications (source code unavailable)
+	- Database Migration - unmatched data types, different character sets
+	- Application Migration - may be difficult to migrate from various mainframe systems
+
+
+Data Validation
+	- method for checking the accuracy and quality of your data
+	- form of data cleansing
+	- ensures data is complete, unique, and within the right threshold of values
+
+	- Challenges:
+
+	- Data may be distributed in multiple databases which may be isolated or outdated
+	- extremely time-consuming, especially for large data sets. Sampling data for validation may be helpful
+
+
+----------------------------------------------------
+
+ETL Scenarios / Cases
+
+	- Two documents used for ETL Testing Process:
+		- ETL Mapping sheets - to outline connected columns in both tables
+		- DB Schemas - kept handy to verify details in mapping sheets
+
+	- Mapping Document Validation
+		- Test if mapping document provides all necessary information.
+		- Should have maintain data types, lengths, transformation rules, etc.
+		- should have a log of changes
+
+	- Validation
+		- Validate source and target tables against mapping document
+		- Validate data types in source and target
+		- Validate data lengths
+		- Verify data formats (like dates)
+		- verify column names across mapping doc
+
+	- Constraint Validation
+		- Ensure constraints are defined
+
+	- Data Consistency Check
+		- Check for misuse of integrity constraints (range, patterns, uniqueness, etc)
+	
+	- Completeness Check
+		- Check all data is laoded to target from source
+		- Count records in target and source
+		- Validate unique values of PKs
+
+	- Correctness Check
+		- Check for misspellings or inaccuracies
+		- Check for Nulls where values are not provided
+
+	- Null Validation
+		- Check for Nulls where Not Null is a constraint
+	
+	- Duplicate Validation
+		- Validate duplicate values in the Data Target
+		- Validate PKs or Unique fields
+
+	- Date Validation
+		- Validate Date fields
+		- Ex: check start dates are not greater than end dates
+		- check Date format
+		- Dates shouldnt have junk values (00-00-0000) or null values
+
+	- Data Cleaning
+		- Unwanted data should be removed before loading into staging area or further
+
+
+---------------------------------------------------
+
+ETL Bugs
+
+	- Input/Output - invalid or valid values not accepted
+	- Calculation - mathematical errors
+	- Load Condition - does not allow for multiple users or wont load accpeted data
+	- Race Condition - system crashes/hangs
+	- Equivalence Class Partitioning (ECP) - invalid types
+	- Boundary Value Analysis (BVA) bug - related to boundaries of expected values
+
+
+
+
+--------------------------------------------------
+
+
+(BI) Business Reporting
+
+	- Process of gathering data by utilizing different software and tools to extract relavent information
+	- provides suggestions or observations about business trends to help decision-makers
+
+	- Have many presentable formats such as Dashboards to visualize these reports.
+	- Google Data Studios
+
+--------------------------------------------------
+
+
+
+
+
+
+
+

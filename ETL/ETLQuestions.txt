@@ -1,0 +1,38 @@
+
+BI/ETL Questions
+
+What is Business Intelligence (BI)?
+What is Business Intelligence (BI) Reporting?
+What are the types of Structured Data?
+What are some of the Data Quality Traits?
+What is Enterprise Data? Types? 
+(Could ask about Transactional vs Analytical Data)
+OLTP vs OLAP Data Systems? When would you use each?
+
+What is ETL, high-level? Why use?
+What is the ETL Process (Lifecycle)?
+What is Extraction? Types?
+What is Transformation? Types?
+What is Load? Types?
+
+
+What is a Data Source? Types?
+What is a Data Warehouse? Type of data collected here?
+What is a Staging area?
+What is an Operational Data Store (ODS)?
+What is a Data Mart?
+What is a Dimensional Database? What schema pattern do they have? (Looking for Star, Snowflake, Galaxy, but just Star is also fine)
+What is a Fact Table? Dimension Table? a measure?
+Why would Data Marts often be de-normalized?
+
+What is Data Mining?
+What is Data Purging?
+
+What is ETL Testing? Why use it?
+Describe the ETL Lifecycle? (a generalization is fine)
+What are some types of ETL Tests? (Wouldn't expect/require them to know all)
+What is Data Validation? Challenges?
+What is Data Migration Testing? Challenges?
+What are some ETL Scenarios and what test cases should we run? (Wouldn't expect/require them to know all)
+What are ETL Bugs? Name any? (Details here would likely be light)
+
